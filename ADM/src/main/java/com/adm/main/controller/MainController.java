@@ -21,9 +21,8 @@ public class MainController {
 				.chattime(new Date())
 				.chatting_type(0)
 				.build();
-		System.out.println(chatroom);
-		re.save(chatroom);
+		//re.save(chatroom);
 		
-		return "NewFile";
+		return "index";
 	}
 }
