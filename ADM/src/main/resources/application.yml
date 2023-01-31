@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://adm.c98xaeaxuyrg.ap-northeast-2.rds.amazonaws.com:3306/adm
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: userADM
+    password: user0102
+    
