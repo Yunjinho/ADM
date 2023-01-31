@@ -1,4 +1,4 @@
-package com.adm.main.chatroom;
+package com.adm.main.test;
 
 import java.util.Date;
 
@@ -22,7 +22,11 @@ class chatroom {
 				.chatting_type(0)
 				.build();
 		
-		re.save(chatroom);
+		insert(chatroom);
+	}
+	
+	void insert(ChattingroomDTO c) {
+		re.save(c);
 	}
 
 }
