@@ -15,29 +15,29 @@ import lombok.ToString;
 
 
 
+@ToString
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
-@Table(name="chattingroom")
-@ToString
+@Table(name="chattingmessage")
 @Builder
-public class ChattingroomDTO {
+public class ChattingMessageDTO {
 	@Id
+	int messageid;
 	int chatroomid;
-	String chatroomname;
-	Date chattime;
-	int chatting_type;
+	Date send_date;
+	String userid;
+	String message;
 	
-	
-	@Builder
-	public ChattingroomDTO(int chatroomid, String chatroomname, Date chattime, int chatting_type) {
+	public ChattingMessageDTO(int messageid, int chatroomid, Date send_date, String userid, String message) {
+		super();
+		this.messageid = messageid;
 		this.chatroomid = chatroomid;
-		this.chatroomname = chatroomname;
-		this.chattime = chattime;
-		this.chatting_type = chatting_type;
+		this.send_date = send_date;
+		this.userid = userid;
+		this.message = message;
 	}
-	
 	
 
 }
