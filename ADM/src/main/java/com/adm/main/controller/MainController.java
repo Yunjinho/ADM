@@ -23,7 +23,7 @@ public class MainController {
 				.chatting_type(0)
 				.build();
 		//re.save(chatroom);
-		
+		System.out.println("연결");
 		return "index";
 	}
 }
