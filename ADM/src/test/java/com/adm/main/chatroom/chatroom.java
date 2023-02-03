@@ -16,7 +16,7 @@ class chatroom {
 	ChattingroomRepository re;
 	@Test
 	void contextLoads() {
-		ChattingroomDTO chatroom=new ChattingroomDTO().builder()
+		ChattingroomDTO chatroom = new ChattingroomDTO().builder()
 				.chatroomname("test")
 				.chattime(new Date())
 				.chatting_type(0)
