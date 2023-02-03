@@ -15,12 +15,12 @@ import lombok.ToString;
 
 
 
-@ToString
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
 @Table(name="chattingroom")
+@ToString
 @Builder
 public class ChattingroomDTO {
 	@Id

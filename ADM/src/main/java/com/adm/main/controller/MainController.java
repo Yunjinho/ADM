@@ -17,8 +17,7 @@ import com.adm.main.service.GatherService;
 public class MainController {
 	@Autowired
 	ChattingroomRepository re;
-	GatherRepository ge;
-	GatherService gs;
+
 	
 //	@RequestMapping("/")
 //	public String index() {
@@ -33,6 +32,5 @@ public class MainController {
 //		return "NewFile";
 //	}
 	
-
 
 }
