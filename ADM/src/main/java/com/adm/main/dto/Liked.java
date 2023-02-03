@@ -1,4 +1,4 @@
-package com.adm.main.entity;
+package com.adm.main.dto;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -17,14 +17,14 @@ import lombok.ToString;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="hate")
+@Table(name="liked")
 @Builder
-public class Hate {
+public class Liked {
 	
 	@Id
-	private int hateid;
+	private int likeid;
 	
 	private String userid;
-	private String hid; // 차단하고 싶은 아이디
+	private String lid; // 호감으로 선택한 아이디
 
 }

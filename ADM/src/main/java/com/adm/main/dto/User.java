@@ -1,4 +1,4 @@
-package com.adm.main.entity;
+package com.adm.main.dto;
 
 import java.util.Date;
 
