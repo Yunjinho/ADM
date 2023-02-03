@@ -9,7 +9,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
-import com.adm.main.entity.Hate;
+import com.adm.main.dto.Hate;
 import com.adm.main.repository.HateRepository;
 
 @DataJpaTest

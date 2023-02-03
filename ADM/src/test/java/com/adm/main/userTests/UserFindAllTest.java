@@ -7,7 +7,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
-import com.adm.main.entity.User;
+import com.adm.main.dto.User;
 import com.adm.main.repository.UserRepository;
 
 @DataJpaTest
