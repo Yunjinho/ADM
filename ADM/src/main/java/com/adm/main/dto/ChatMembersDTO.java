@@ -24,6 +24,7 @@ public class ChatMembersDTO {
 	int gmemberid;
 	int chatroomid;
 	String userid;
+	@Builder
 	public ChatMembersDTO(int gmemberid, int chatroomid, String userid) {
 		super();
 		this.gmemberid = gmemberid;

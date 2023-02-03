@@ -20,21 +20,21 @@ import lombok.ToString;
 @Setter
 @Getter
 @NoArgsConstructor
-@Table(name="gahterschedules")
+@Table(name="gatherschedules")
 @Builder
 public class GatherSchedulesDTO {
 	@Id
-	int gschedulesid;
+	int gschedules_id;
 	String userid;
 	int gatherid;
 	String gcontents;
 	Date schedules_gather;
 	String gplace;
-	
-	public GatherSchedulesDTO(int gschedulesid, String userid, int gatherid, String gcontents, Date schedules_gather,
+	@Builder
+	public GatherSchedulesDTO(int gschedules_id, String userid, int gatherid, String gcontents, Date schedules_gather,
 			String gplace) {
 		super();
-		this.gschedulesid = gschedulesid;
+		this.gschedules_id = gschedules_id;
 		this.userid = userid;
 		this.gatherid = gatherid;
 		this.gcontents = gcontents;

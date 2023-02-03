@@ -24,18 +24,18 @@ import lombok.ToString;
 @Builder
 public class DateSchedulesDTO {
 	@Id
-	int dschedulesid;
+	int dschedules_id;
 	String userid;
 	String did;
 	String dcontents;
 	Date Schedules_date;
 	String dplace;
 	
-	
-	public DateSchedulesDTO(int dschedulesid, String userid, String did, String dcontents, Date schedules_date,
+	@Builder
+	public DateSchedulesDTO(int dschedules_id, String userid, String did, String dcontents, Date schedules_date,
 			String dplace) {
 		super();
-		this.dschedulesid = dschedulesid;
+		this.dschedules_id = dschedules_id;
 		this.userid = userid;
 		this.did = did;
 		this.dcontents = dcontents;

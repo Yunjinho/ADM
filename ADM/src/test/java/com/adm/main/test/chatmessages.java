@@ -1,5 +1,9 @@
 package com.adm.main.test;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,21 +19,31 @@ class chatmessages {
 	@Test
 	void contextLoads() {
 		ChattingMessageDTO chatMsg;
-		
-		insert();
+		chatMsg=new ChattingMessageDTO().builder()
+				.message("hi")
+				.userid("dbswlsgh")
+				.messageid(1)
+				.send_date(new Date())
+				.build();
+		insert(chatMsg);
 	}
 	
-	void insert() {
+	void insert(ChattingMessageDTO c) {
+		re.save(c);
 	}
-	void delete() {
-		
+	void delete(int pk) {
+		re.deleteById(pk);
 	}
 	
-	void update() {
-		
+	void update(ChattingMessageDTO c) {
+		c.setMessage("바꿩요");
+		re.save(c);
 	}
-	void find() {
-		
+	Optional<ChattingMessageDTO> find(int pk) {
+		return re.findById(pk);
+	}
+	List<ChattingMessageDTO> findall(){
+		return re.findAll();
 	}
 
 }

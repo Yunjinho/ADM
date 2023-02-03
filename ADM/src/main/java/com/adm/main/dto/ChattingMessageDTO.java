@@ -29,7 +29,7 @@ public class ChattingMessageDTO {
 	Date send_date;
 	String userid;
 	String message;
-	
+	@Builder
 	public ChattingMessageDTO(int messageid, int chatroomid, Date send_date, String userid, String message) {
 		super();
 		this.messageid = messageid;
