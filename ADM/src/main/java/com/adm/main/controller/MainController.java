@@ -13,10 +13,11 @@ import com.adm.main.repository.ChattingroomRepository;
 public class MainController {
 	@Autowired
 	ChattingroomRepository re;
-	
+	@Autowired
+	ChattingroomDTO chatroom;
 	@RequestMapping("/")
 	public String index() {
-		ChattingroomDTO chatroom=new ChattingroomDTO().builder()
+		chatroom=new ChattingroomDTO().builder()
 				.chatroomname("test")
 				.chattime(new Date())
 				.chatting_type(0)
