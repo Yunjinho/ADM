@@ -16,28 +16,36 @@ public class GatherTest {
 
 	
 	  @Test 
-	  void contextLoads() { GatherDTO gather = new GatherDTO().builder().gathername("test").gatherid(2).userid("wh467925")
-	  .number_of_member(45).category("운동").gather_info("운동하기싫어요").img("a.jpg").
-	  build();
+	  void contextLoads() { 
+		  GatherDTO gather = new GatherDTO().builder()
+				  .gathername("test")
+				  .gatherid(2)
+				  .userid("wh467925")
+				  .number_of_member(45)
+				  .category("운동")
+				  .gather_info("운동하기싫어요")
+				  .img("a.jpg")
+				  .build();
 	  
 	  ge.save(gather);
 	  }
 	
 
 	@Test
-
 	void finaAll() {
 		//전체 리스트 조회
 		List<GatherDTO> gather = ge.findAll();
 	}
 
 	
-	/*
-	 * @Test
-	 * 
-	 * void delete() { GatherDTO gather = ge.findById((int)1).get();
-	 * ge.delete(gather); }
-	 */
+	
+	  @Test	  
+	  void delete() { 
+		//삭제
+		 GatherDTO gather = ge.findById((int)1).get();
+		 ge.delete(gather); 
+	  }
+	 
 	
 
 }
