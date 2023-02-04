@@ -24,8 +24,7 @@ public class MainController {
 				.chattime(new Date())
 				.chatting_type(0)
 				.build();
-//		//re.save(chatroom);		
-		System.out.println("ø÷æ»≈∏");
+		
 		return "index";
 	}
 }
