@@ -1,4 +1,4 @@
-package com.adm.main.controller;
+package com.adm.main;
 
 import java.util.Date;
 
@@ -19,13 +19,13 @@ public class MainController {
 	
 	@RequestMapping("/")
 	public String index() {
+		System.out.println("왜안타");
 		chatroom=new ChattingroomDTO().builder()
 				.chatroomname("test")
 				.chattime(new Date())
 				.chatting_type(0)
 				.build();
 //		//re.save(chatroom);		
-		System.out.println("왜안타");
 		return "index";
 	}
 }

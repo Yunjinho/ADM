@@ -55,6 +55,35 @@ ALTER TABLE chattingmessage ADD CONSTRAINT PRIMARY KEY(messageid);
 ALTER TABLE chattingmessage MODIFY messageid INT AUTO_INCREMENT;
 ALTER TABLE chattingmessage AUTO_INCREMENT = 1;
 
+CREATE TABLE gather (
+	gatherid	int	,
+	userid	VARCHAR(200),
+	gathername	VARCHAR(100),
+	number_of_member	int	,
+	category	VARCHAR(100),
+	gather_info	VARCHAR(200),
+	img	VARCHAR(200)
+);
+
+CREATE TABLE member_list (
+	gmemberid	varchar(100),
+	gatherid	int,
+	number_of_member	int
+);
+
+CREATE TABLE categories (
+	cateid	int,
+	catename	VARCHAR(100)
+);
+
+CREATE TABLE album (
+	albumid	int,
+	gatherid	int,
+	img	VARCHAR(200)
+);
+
+
 drop table dateschedules;
 select * from chattingroom;
 desc chattingroom;
+
