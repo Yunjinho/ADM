@@ -6,4 +6,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: userADM
     password: user0102
-    
+  mvc:
+    static-path-pattern: /resource/templates
