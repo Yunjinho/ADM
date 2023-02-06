@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan({"com.adm.main.dto"})
+/* @ComponentScan({"com.adm.main.dto"}) */
 public class AdmApplication {
 
 	public static void main(String[] args) {
