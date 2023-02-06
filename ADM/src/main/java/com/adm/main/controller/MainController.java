@@ -14,7 +14,7 @@ public class MainController {
 	@RequestMapping("/")
 	public String index() {		
 		System.out.println("ø÷æ»≈∏");
-		return "main";
+		return "index";
 	}
 	
 	@RequestMapping("/weather")
