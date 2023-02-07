@@ -13,13 +13,13 @@ public class MainController {
 	
 	@RequestMapping("/")
 	public String index() {		
-		System.out.println("¿Ö¾ÈÅ¸");
+		System.out.println("");
 		return "index";
 	}
 	
 	@RequestMapping("/weather")
 	public String weather() {
-		System.out.println("³¯¾¾");
+		System.out.println("");
 		return "weather";
 	}
 }
