@@ -1,3 +1,44 @@
+CREATE TABLE  user  (
+	 userid 	VARCHAR(200),
+	 password 	VARCHAR(200),
+	 gender 	VARCHAR(200),
+	 address 	VARCHAR(1000),
+	 profileimg1 	VARCHAR(200),
+	 profileimg2 	VARCHAR(200),
+	 phone 	VARCHAR(200),
+	 email 	VARCHAR(200),
+	 name 	VARCHAR(200),
+	 birth 	DATETIME,
+	 job 	VARCHAR(200),
+	 hobby 	VARCHAR(200),
+	 interest 	VARCHAR(200),
+	 exposure_yn 	INT,
+	 nickname 	VARCHAR(200)
+);
+
+ALTER TABLE user ADD CONSTRAINT PRIMARY KEY(userid);
+
+CREATE TABLE  liked  (
+	 likeid 	INT,
+	 userid 	VARCHAR(200),
+	 lid 	VARCHAR(200)
+);
+
+ALTER TABLE liked ADD CONSTRAINT PRIMARY KEY(likeid);
+ALTER TABLE liked MODIFY likeid INT AUTO_INCREMENT;
+ALTER TABLE liked AUTO_INCREMENT = 1;
+
+CREATE TABLE  hate  (
+	 hateid 	INT,
+	 userid 	VARCHAR(200),
+	 hid 	VARCHAR(200)
+);
+
+ALTER TABLE hate ADD CONSTRAINT PRIMARY KEY(hateid);
+ALTER TABLE hate MODIFY hateid INT AUTO_INCREMENT;
+ALTER TABLE hate AUTO_INCREMENT = 1;
+
+
 CREATE TABLE chat_members (
 	gmemberid	INT,
 	chatroomid	INT,
@@ -55,6 +96,35 @@ ALTER TABLE chattingmessage ADD CONSTRAINT PRIMARY KEY(messageid);
 ALTER TABLE chattingmessage MODIFY messageid INT AUTO_INCREMENT;
 ALTER TABLE chattingmessage AUTO_INCREMENT = 1;
 
+CREATE TABLE gather (
+	gatherid	int	,
+	userid	VARCHAR(200),
+	gathername	VARCHAR(100),
+	number_of_member	int	,
+	category	VARCHAR(100),
+	gather_info	VARCHAR(200),
+	img	VARCHAR(200)
+);
+
+CREATE TABLE member_list (
+	gmemberid	varchar(100),
+	gatherid	int,
+	number_of_member	int
+);
+
+CREATE TABLE categories (
+	cateid	int,
+	catename	VARCHAR(100)
+);
+
+CREATE TABLE album (
+	albumid	int,
+	gatherid	int,
+	img	VARCHAR(200)
+);
+
+
 drop table dateschedules;
 select * from chattingroom;
 desc chattingroom;
+

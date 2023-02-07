@@ -8,6 +8,8 @@ class AdmApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
+		
 	}
 
 }
