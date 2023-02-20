@@ -22,7 +22,7 @@ public class UserDeleteTest {
 	
 	@Test
 	void deleteTest() {
-		String userId = "jino1234";
+		String userId = "hannah123";
 		userRepo.deleteById(userId);
 		
 		Optional<User> optionalUser = userRepo.findById(userId);

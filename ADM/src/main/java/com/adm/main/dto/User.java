@@ -5,8 +5,8 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import org.springframework.format.annotation.DateTimeFormat;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -37,7 +37,7 @@ public class User {
 	private String email;
 	private String name;
 	
-	@DateTimeFormat(pattern = "yy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	private Date birth;
 	
 	private String job;

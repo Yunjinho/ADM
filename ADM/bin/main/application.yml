@@ -1,9 +1,21 @@
 spring:
-  jpa:
-    show-sql: true
   datasource:
     url: jdbc:mysql://adm.c98xaeaxuyrg.ap-northeast-2.rds.amazonaws.com:3306/adm
-    driver-class-name: com.mysql.cj.jdbc.Driver
     username: userADM
     password: user0102
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#       show_sql: ture
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
+        
     

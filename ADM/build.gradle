@@ -32,19 +32,11 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	
-<<<<<<< HEAD
 	// 타임리프
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' /* 레이아웃 */
 
 	// 타임리프 - Bootstrap
-=======
-	// Ÿ�Ӹ���
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect' /* ���̾ƿ� */
-
-// Ÿ�Ӹ��� - Bootstrap
->>>>>>> refs/heads/master
 	implementation 'org.webjars:webjars-locator:0.45'
 	implementation 'org.webjars:bootstrap:5.1.'
 	
@@ -52,6 +44,10 @@ dependencies {
 	
 	implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
 	runtimeOnly 'org.webjars:bootstrap:4.5.0'
+	
+	// 콘솔에 쿼리 파라미터 로그를 남겨줌
+	// 배포시에는 성능 테스트를 해봐야 한다.
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
 
 }
 

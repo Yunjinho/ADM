@@ -15,7 +15,7 @@ import com.adm.main.repository.UserRepository;
 @Rollback(false)
 public class UserCreateTest {
 	
-	String  day = "1998-01-05"; 
+	String  day = "1994-11-05"; 
 	java.sql.Date mdate = java.sql.Date.valueOf(day);
 	
 	@Autowired
@@ -25,21 +25,21 @@ public class UserCreateTest {
 	void createTest() {
 		User user = 
 				User.builder()
-					.userid("ehdwns8467")
-					.password("1234")
-					.gender("남자")
-					.address("동작구")
-					.profileimg1("a.jpg")
-					.profileimg2("b.jpg")
-					.phone("01096612441")
-					.email("ehdwns8467@gmail.com")
-					.name("신동준")
+					.userid("hannah123")
+					.password("4321")
+					.gender("여자")
+					.address("관악구")
+					.profileimg1("c.jpg")
+					.profileimg2("d.jpg")
+					.phone("01012345678")
+					.email("hannah1234@gmail.com")
+					.name("조한나")
 					.birth(mdate)
-					.job("회사원")
-					.hobby("축구")
-					.interest("음식")
+					.job("개발자")
+					.hobby("산책")
+					.interest("영화")
 					.exposure_yn(0)
-					.nickname("동준")
+					.nickname("힌나")
 					.build();
 		
 		User saveUser = userRepo.save(user);
